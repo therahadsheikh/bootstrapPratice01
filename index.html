@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- STEP 1: METADATA & DEPENDENCIES -->
+    <!-- These are the "brains" of your site. Always start by linking Bootstrap and Fonts. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraPure | Practice Landing Page</title>
+    
+    <!-- Bootstrap 5 CSS (Framework) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons (Asset Library) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts (Aesthetics) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { padding-top: 50px; background-color: #f8f9fa; }
+        .practice-section { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 15px; 
+            margin-bottom: 50px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .grid-demo { 
+            background-color: #e9ecef; 
+            border: 1px solid #dee2e6; 
+            padding: 10px; 
+            text-align: center;
+            font-weight: bold;
+        }
+        h2 { color: #2d5a27; margin-bottom: 20px; border-left: 5px solid #2d5a27; padding-left: 15px; }
+    </style>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-5 fw-bold">Bootstrap Mastery Lab</h1>
+        <section class="practice-section">
+            <h2>1 Grid System</h2>
+            <p class="text-muted"> The grid is 12 column system, Columns must be inside a <code>.Row</code> Which must be inside a <code>.container</code> </p>
+            <div class="row g-3">
+                <div class="col-12"><div class="grid-demo">Col-12 (full Width)</div></div>
+                <div class="col-6"><div class="grid-demo">Col-6 (full Width)</div></div>
+                <div class="col-6"><div class="grid-demo">Col-6 (full Width)</div></div>
+                <div class="col-4"><div class="grid-demo">Col-4 (full Width)</div></div>
+                <div class="col-4"><div class="grid-demo">Col-4 (full Width)</div></div>
+                <div class="col-4"><div class="grid-demo">Col-4 (full Width)</div></div>
+            </div>
+        </section>
+
+        <!-- 2. Components-->
+         <section class="practice-section">
+            <h2>2 Components</h2>
+
+            <div class="mb-4">
+                <h6>Buttons</h6>
+                <button class="btn btn-primary">Primary</button>
+                <button class="btn btn-success">Success</button>
+                <button class="btn btn-outline-danger">Outline Danger</button>
+                <button class="btn btn-warning rounded-pill">Pill Shape</button>
+            </div>
+
+            <div class="mb-4">
+                <h6>Cards</h6>
+                <div class="card" style="width: 18rem;">
+                    <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=200" class="card-img-top" alt="Sample">
+                    <div class="card-body">
+                        <h5 class="card-title">Product Card</h5>
+                        <p class="card-text">Lorem, ipsum dolor.</p>
+                        <a href="#" class="btn btn-primary">Action</a>
+                    </div>
+                </div>
+                   <h6>Modal:</h6>
+                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#demoModal">
+                    Launch Practice Modal
+                </button>
+            </div>
+         </section>
+        <!-- 3. UTILITIES -->
+          <section class="practice-section">
+            <h2>3. Utilities</h2>
+            <p class="text-muted">Lorem ipsum dolor sit amet..</p>
+            <div class="bg-primary text-white p-3 mb-2 rounded">Lorem ipsum dolor sit amet consectetur.</div>
+            <div class="bg-light border p-3 mt-4 text-center fw-bold text-uppercase">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe.</div>
+            <div class="shadow-lg p-3 mt-3 bg-white rounded">Lorem ipsum dolor sit amet.</div>
+        </section>
+    <!-- 4. RESPONSIVE CLASSES -->
+        <section class="practice-section">
+            <h2>4. Responsive Classes</h2>
+            <p class="text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+            <div class="alert alert-info">
+                This column is <b>Full Width</b> on Mobile, but <b>Half Width</b> on Desktop:
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 mb-2">
+                    <div class="p-3 bg-warning">I am col-12 (sm) and col-md-6 (medium+)</div>
+                </div>
+                <div class="col-12 col-md-6 mb-2">
+                    <div class="p-3 bg-warning">I am col-12 (sm) and col-md-6 (medium+)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. BOOTSTRAP ICONS -->
+        <section class="practice-section text-center">
+            <h2>5. Bootstrap Icons</h2>
+            <div class="d-flex justify-content-around fs-1">
+                <i class="bi bi-cart4 text-primary"></i>
+                <i class="bi bi-heart-fill text-danger"></i>
+                <i class="bi bi-person-circle"></i>
+                <i class="bi bi-truck text-success"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+            </div>
+            <p class="mt-3">Use <code>fs-1</code> to <code>fs-6</code> to change icon size!</p>
+        </section>
+    </div>
+
+    <!-- MODAL COMPONENT CODE -->
+    <div class="modal fade" id="demoModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Practice Modal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    Success! You just triggered a Bootstrap Modal.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+    </div>
+</body>
